@@ -1,0 +1,8 @@
+{
+  "name": "solid/router",
+  "autoload": {
+    "psr-4": {
+      "Solid\\Router\\": "src/"
+    }
+  }
+}
