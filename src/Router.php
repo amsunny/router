@@ -1,17 +1,27 @@
 <?php
 
-namespace Solid\Router;
+namespace Reign\Router;
 
 class Router
 {
     protected $routes = [];
 
-    public function get($pattern, $callback)
+    public function add($method, $pattern, $callback)
     {
         $this->routes[$pattern] = [
-            'method' => 'GET',
+            'method' => $method,
             'callback' => $callback,
         ];
+    }
+
+    public function get($pattern, $callback)
+    {
+        $this->add('GET', $pattern, $callback);
+    }
+
+    public function post($pattern, $callback)
+    {
+        $this->add('POST', $pattern, $callback);
     }
 
     public function run()

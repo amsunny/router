@@ -2,7 +2,7 @@
   "name": "reign/router",
   "autoload": {
     "psr-4": {
-      "Solid\\Router\\": "src/"
+      "Reign\\Router\\": "src/"
     }
   }
 }
